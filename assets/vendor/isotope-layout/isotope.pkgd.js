@@ -295,7 +295,7 @@ return EvEmitter;
 // get a number from a string, not a percentage
 function getStyleSize( value ) {
   var num = parseFloat( value );
-  // not a percent like '100%', and a number
+  // not a percent like '100%' and a number
   var isValid = value.indexOf('%') == -1 && !isNaN( num );
   return isValid && num;
 }
@@ -897,7 +897,7 @@ proto.css = function( style ) {
   }
 };
 
- // measure position, and sets it
+ // measure position and sets it
 proto.getPosition = function() {
   var style = getComputedStyle( this.element );
   var isOriginLeft = this.layout._getOption('originLeft');
@@ -3110,7 +3110,7 @@ var trim = String.prototype.trim ?
     // set any options pass
     this.option( opts );
     this._getIsInstant();
-    // filter, sort, and layout
+    // filter, sort and layout
 
     // filter
     var filtered = this._filter( this.items );
@@ -3319,7 +3319,7 @@ var trim = String.prototype.trim ?
         };
       }
 
-      // otherwise, assume its a querySelector, and get its text
+      // otherwise, assume its a querySelector and get its text
       return function getChildText( elem ) {
         var child = elem.querySelector( query );
         return child && child.textContent;
@@ -3467,7 +3467,7 @@ var trim = String.prototype.trim ?
   };
 
   /**
-   * Filter, sort, and layout newly-appended item elements
+   * Filter, sort and layout newly-appended item elements
    * @param {Array or NodeList or Element} elems
    */
   proto.insert = function( elems ) {
