@@ -1,0 +1,278 @@
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: var(--default-font);
+}
+
+.section-title div {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.section-title div .description-title {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Travel Hero Section
+--------------------------------------------------------------*/
+.intro-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0 60px 0;
+}
+
+.intro-section .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.intro-section .hero-background img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  ;
+  justify-content: space-between;
+  width: 90%;
+  z-index: 1;
+}
+
+.intro-section .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--background-color), transparent 60%) 0%, color-mix(in srgb, var(--background-color), transparent 80%) 50%, color-mix(in srgb, var(--background-color), transparent 90%) 100%);
+  z-index: 1;
+}
+.intro-section .left-container{
+    width: 50%;
+}
+.intro-section .right-container{
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
+}
+.intro-section .hero-text .hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* margin-bottom: 1.5rem; */
+  line-height: 1.2;
+}
+
+.intro-section .hero-text .hero-subtitle {
+  font-size: 1.3rem;
+  /* margin-bottom: 2rem; */
+  color: #efb435;
+  font-weight: 500;
+  /* opacity: 0.9; */
+  line-height: 1;
+}
+
+.intro-section .hero-text .hero-buttons .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.intro-section .hero-text .hero-buttons .btn.btn-primary {
+  background-color: #02478e;
+  border-color: #02478e;
+  color: white;
+}
+
+.intro-section .hero-text .hero-buttons .btn.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-2px);
+}
+
+.intro-section .hero-text .hero-buttons .btn.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--contrast-color);
+  color: var(--contrast-color);
+}
+
+.intro-section .hero-text .hero-buttons .btn.btn-outline:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.intro-section .right-content{
+  background-color: rgba(246, 246, 246, 0);
+  border-radius: 15px;
+  display: flex;
+  /* color: #efb435; */
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 35%);
+  backdrop-filter: blur(2px);
+}
+.intro-section .right-content .features-box{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    font-weight: 500;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.intro-section .right-content .features-box i{
+    color: #efb435;
+    font-size: 1.5rem;
+    /* background-color: aliceblue; */
+    border-radius: 20%;
+    padding: 3px 6px 3px 6px;
+}
+.intro-section .right-content .features-box  .bi:hover{
+    color: white;
+    padding: 3px 6px 3px 6px;
+    background-color: #efb435;
+    transform: scale(1.);
+}
+
+
+
+
+@media (max-width: 992px) {
+.intro-section .home-container .row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-section .right-container, .intro-section .left-container{
+    width: 90%;
+    margin: 0;
+    padding: 0;}
+.intro-section .right-container {
+   
+    width: auto;
+    height: auto;
+   content: center; 
+}
+.intro-section .right-container .right-content{
+    width: 100%;
+    flex-wrap: nowrap;
+    padding: 10px 50px 10px 50px;
+    
+    margin: 0;
+    /* padding: 1rem; */
+}
+
+  .intro-section .hero-text {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section .hero-text .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .intro-section .hero-text .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .intro-section .hero-text .hero-title {
+    font-size: 2rem;
+  }
+
+  .intro-section .hero-text .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .intro-section .hero-text .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .intro-section .right-container .right-content{
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 10px 40px 10px 40px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 635px) {
+  .intro-section {
+    padding: 110px 0 50px 0;
+  }
+.intro-section .hero-text{
+    margin-bottom: 1.5rem;
+}
+  
+}
+
+@media (max-width: 570px) {
+  .intro-section {
+    padding: 100px 0 40px 0;
+  }
+
+  .intro-section .hero-text .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .intro-section .hero-text .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .intro-section .right-container .right-content{
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 0;
+}
+}
