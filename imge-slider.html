@@ -1,108 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Image Slider</title>
+  <title>Image Slider</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    body{
       min-height: 100vh;
+      display: grid;
+      place-items: center;
     }
-
-    .slider {
-      overflow: hidden;
-      width: 90%;
-      max-width: 1200px;
-      border-radius: 15px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      background: #fff;
+    .slider{
+      height: 250px;
+      /* background-color: aqua; */
+      margin: auto;
       position: relative;
-    }
-
-    .slider-track {
-      display: flex;
-      gap: 20px;
-      animation: scroll 30s linear infinite;
-      width: calc(250px * 14); /* enough to loop smoothly */
-    }
-
-    .slide {
-      /* flex: 0 0 auto; */
-      width: 10%; /* 4 images per row (desktop) */
-      /* padding: 10px; */
-      /* gap :50px; */
-      /* maintain square aspect ratio */
-      /* box-sizing: border-box; */
-    }
-
-    .slide img {
       width: 100%;
-      height: 130px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+    .slide-track{
+      display: flex;
+      width: calc(250px * 6);
+      animation: scroll 30s linear infinite;
+    }
+
+    .slide-track:hover{
+      animation-play-state: paused;
+    }
+
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-250px*6));
+  }
+}
+
+
+    .slide{
+      height: 100px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      perspective: 100px;
+    }
+    img{
+      width:200px;
       object-fit: contain;
+      height:100px;
+      transition: transform 1s;
+      aspect-ratio: 3/4;
+      filter: grayscale(100%);  }
 
-      border-radius: 12px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    img:hover{
+      transform: translateZ(20px);
+      filter: grayscale(0%);
+    }
+    /* SHADOWS  */
+    
+    .slider::before{
+      left: 0;
+      top: 0;
+    }
+    .slider::after{
+      right: 0%;
+      top: 0%;
+      transform: rotate(180deg); 
     }
 
-    .slide img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Tablet view (3 images per row) */
-    @media (max-width: 992px) {
-      .slide {
-        width: 15%;
-      }
-      .slide img {
-        height: 200px;
-      }
-    }
-
-    /* Mobile view (2 images per row) */
-    @media (max-width: 600px) {
-      .slide {
-        width: 50%;
-      }
-      .slide img {
-        height: 180px;
-      }
-    }
+   
   </style>
 </head>
-<body>
 
+<body>
   <div class="slider">
-    <div class="slider-track">
-      <!-- Add your images here (duplicate for smooth loop) -->
-      <div class="slide"><img src="images/era-university-logo.png" alt=""></div>
-      <div class="slide"><img src="images/era-logo.png" alt=""></div>
-      <div class="slide"><img src="images/criteriontech-logo.png" alt=""></div>
-      <div class="slide"><img src="images/trueforms-logo.png" alt=""></div>
-      <div class="slide"><img src="images/barbados-logo.png" alt=""></div>
-      <div class="slide"><img src="images/siemens-logo.png" alt=""></div>
-      
-      
-      <!-- duplicate images for infinite loop -->
-      <div class="slide"><img src="images/era-university-logo.png" alt=""></div>
-      <div class="slide"><img src="images/era-logo.png" alt=""></div>
-      <div class="slide"><img src="images/criteriontech-logo.png" alt=""></div>
-      <div class="slide"><img src="images/trueforms-logo.png" alt=""></div>
-      <div class="slide"><img src="images/barbados-logo.png" alt=""></div>
-      <div class="slide"><img src="images/siemens-logo.png" alt=""></div>
+    <div class="slide-track">
+      <div class="slide"><img src="images/era-university-logo.webp" alt="era-university-logo" srcset=""></div>
+      <div class="slide"><img src="images/elmch-logo.webp" alt="elmch-logo" srcset=""></div>
+      <div class="slide"><img src="images/true-form-games.webp" alt="true-form-games" srcset=""></div>
+      <div class="slide"><img src="images/criterion-tech.webp" alt="criterion-tech" srcset=""></div>
+      <div class="slide"><img src="images/siemens.webp" alt="siemens" srcset=""></div>
+      <div class="slide"><img src="images/barbados.webp" alt="barbados" srcset=""></div>
+      <div class="slide"><img src="images/era-university-logo.webp" alt="era-university-logo" srcset=""></div>
+      <div class="slide"><img src="images/elmch-logo.webp" alt="elmch-logo" srcset=""></div>
+      <div class="slide"><img src="images/true-form-games.webp" alt="true-form-games" srcset=""></div>
+      <div class="slide"><img src="images/criterion-tech.webp" alt="criterion-tech" srcset=""></div>
+      <div class="slide"><img src="images/siemens.webp" alt="siemens" srcset=""></div>
+      <div class="slide"><img src="images/barbados.webp" alt="barbados" srcset=""></div>
     </div>
   </div>
-
 </body>
+
 </html>

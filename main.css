@@ -1445,7 +1445,13 @@ section,
   line-height: 1;
 }
 
-.intro-section .hero-text .hero-buttons .btn {
+.intro-section .home-container .left-container .hero-text .hero-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.intro-section .home-container .left-container .hero-text .hero-buttons .btns {
   padding: 12px 30px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1454,27 +1460,27 @@ section,
   transition: all 0.3s ease;
 }
 
-.intro-section .hero-text .hero-buttons .btn.btn-primary {
+.intro-section .hero-text .hero-buttons .btns.btn-primary {
   background-color: #02478e;
   border: 3px solid;
   border-color: #02478e;
   color: white;
 }
 
-.intro-section .hero-text .hero-buttons .btn.btn-primary:hover {
+.intro-section .hero-text .hero-buttons .btns.btn-primary:hover {
   background-color: #02274f;
   border-color: #02274f;
   transform: translateY(-2px);
 }
 
-.intro-section .hero-text .hero-buttons .btn.btn-outline {
+.intro-section .hero-text .hero-buttons .btns.btn-outline {
   background-color: rgba(128, 128, 128, 0.817);
   border: 3px solid #02478e;
   background: blur(5px);
   color: #02478e;
 }
 
-.intro-section .hero-text .hero-buttons .btn.btn-outline:hover {
+.intro-section .hero-text .hero-buttons .btns.btn-outline:hover {
   background-color: #02274f;
   color: white;
   transform: translateY(-4px);
@@ -2617,91 +2623,68 @@ grid-column: 2 / 4;
 
 
 .slider {
-  overflow: hidden;
-  width: 100%;
-  max-width: 1200px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  position: relative;
-}
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      background: #fff;
+    }
 
-.slider-track {
-  display: flex;
-  gap: 20px;
-  animation: scroll 30s linear infinite;
-  width: calc(250px * 14);
-  /* enough to loop smoothly */
-}
+    .slider-track {
+      display: flex;
+      gap: 40px;
+      animation: scroll 25s linear infinite;
+      will-change: transform;
+    }
 
-.slide {
-  /* flex: 0 0 auto; */
-  width: 10%;
-  /* 4 images per row (desktop) */
-  /* padding: 10px; */
-  /* gap :50px; */
-  /* maintain square aspect ratio */
-  /* box-sizing: border-box; */
-}
+    .slide {
+      flex: 0 0 auto;
+      width: 250px;
+    }
 
-.empty-box {
-  width: 2%;
-}
+    .slide img {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
 
-.slide img {
-  width: 100%;
-  height: 130px;
-  object-fit: contain;
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+    /* Responsive */
+    @media (max-width: 992px) {
+      .slide { width: 180px; }
+      .slide img { height: 100px; }
+    }
 
-.slide img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
+    @media (max-width: 600px) {
+      .slide { width: 130px; }
+      .slide img { height: 80px; }
+    }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Tablet view (3 images per row) */
-@media (max-width: 990px) {
-  .slide {
-    width: 20%;
-  }
-
-  .slide img {
-    height: 150px;
-  }
-}
-
-/* Mobile view (2 images per row) */
-@media (max-width: 600px) {
-  .slide {
-    width: 5%;
-    gap: 20px;
-  }
-
-  .slide img {
-    height: 120px;
-  }
-}
-
-
-
-
-
-
-
-
+    /* Buttons */
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+      transition:  0.3s ease;
+      z-index: 10;
+    }
+    .btn:hover { background: rgba(0,0,0,0.8); }
+    .prev { left: 10px; }
+    .next { right: 10px; }
 
 
 
@@ -4638,6 +4621,7 @@ grid-column: 2 / 4;
 
 .travel-about .features-grid .feature-card {
   height: 280px;
+  border-radius: 50%;
   position: relative;
   perspective: 1000px;
   cursor: pointer;
@@ -4668,8 +4652,8 @@ grid-column: 2 / 4;
   height: 80px;
   /* background: color-mix(in srgb, var(--accent-color), transparent 85%);
   color: var(--accent-color); */
-  background-color: #02478e;
-  color: white;
+  color: #02478e;
+  /* color: white; */
   border-radius: 2px;
   display: flex;
   align-items: center;
