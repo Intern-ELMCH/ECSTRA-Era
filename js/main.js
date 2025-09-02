@@ -43,15 +43,7 @@ document.addEventListener("click", function (e) {
     );
   }
 });
-
-
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", function(e) {
-      if (!e.target.closest(".nav-links ul li")) {
-        document.querySelectorAll(".nav-links ul li").forEach(li => li.classList.remove("show"));
-      }
-    });
-
+   
   /**
    * Preloader
    */
@@ -62,6 +54,13 @@ document.addEventListener("click", function (e) {
     });
   }
 
+// Whatapp Icon 
+//   const whatsApp = document.querySelector('#whatsapp');
+// if (whatsApp) {
+//   window.addEventListener('load', () => {
+//     whatsApp.remove();
+//   });
+// }
   /**
    * Scroll top button
    */
@@ -174,32 +173,11 @@ document.addEventListener("click", function (e) {
 
 
 
-// breadcrumbs / image-slider
 
-  const slider = document.querySelector(".slider-list");
-  const slides = document.querySelectorAll(".slider-list li");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
 
-  let currentIndex = 0;
-  const totalSlides = slides.length;
 
-  function showSlide(index) {
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-  }
+  
+  
 
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-  }
-
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
-  // Auto slide
-  setInterval(nextSlide, 3000);
+  
