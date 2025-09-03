@@ -2274,7 +2274,7 @@ section,
 }
 
 .why-us .feature-card:hover .feature-icon {
-  background-color: goldenrod;
+  background-color:#02478e;
   color: rgb(248, 248, 248);
   z-index: 1;
 }
@@ -2282,8 +2282,8 @@ section,
 .why-us .feature-icon {
   width: 80px;
   height: 80px;
-  background-color: rgba(245, 222, 165, 0.438);
-  color: rgba(229, 176, 42, 0.863);
+  background-color:#02488e1c;
+  color: #02478e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -4916,6 +4916,42 @@ li {
   color: var(--accent-color);
   transform: translateY(-2px);
 }
+
+/* SHIFT Innovation Lab  */
+.innovation-lab-customers .lab-customers{
+  width: 80%;
+  /* background-color: #10b981; */
+  align-items: center;
+  /* column-gap: 20px; */
+  padding-left: 60px;
+  justify-content: center;
+}
+.innovation-lab-customers {
+  width: 100%;
+  /* background-color: #0077B5; */
+  
+}
+.innovation-lab-customers .lab-customers .benefits-container .benefit{
+  /* background-color: red; */
+  text-align: center;
+  /* justify-content: center; */
+  width: 40%;
+  align-items: center;
+}
+.innovation-lab-customers .lab-customers .benefits-container .benefit p{
+  margin-bottom: 0px;
+}
+
+.how-we-work{
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  background-color: rgba(225, 224, 224, 0.292);
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Travel Destinations Section
