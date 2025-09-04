@@ -924,7 +924,7 @@ section,
   /* background-color: #11427d; */
   z-index: 2;
 }
-.content-wrapper{
+ .hero-content .content-wrapper{
   /* background-color: #059652; */
 /* justify-content: left; */
   justify-items: center;
@@ -1036,7 +1036,7 @@ section,
 }
 .purecounter-box .plus{
   color:#02478e;
-  font-size: 1.5rem;
+  font-size: 2rem;
   align-self: center;
   justify-self: center;
   font-weight: 600;
