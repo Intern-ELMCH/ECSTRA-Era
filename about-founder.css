@@ -939,6 +939,24 @@ section,
   top: -80px;
 }
 
+@media(min-width:1500px){
+  .hero .container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #11427d; */
+  z-index: 2;
+}
+  .hero-content{
+  /* background-color: #059652; */
+  width: 54vw;
+}
+.hero-image{
+  /* background-color: #2973cc; */
+  width: 30vw;
+  /* top: -80px; */
+}
+}
 @media (max-width: 991px) {
   .hero .hero-content {
     padding: 60px 30px;
