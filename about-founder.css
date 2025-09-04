@@ -952,8 +952,8 @@ section,
   }
 }
 
-.hero .content-wrapper h1 {
-  color: #000;
+.hero .hero-title h1 {
+  color: #02478e;
   font-size: 3.5rem;
 }
 
@@ -977,7 +977,7 @@ section,
 }
 
 .hero .hero-title .typed {
-  color: var(--accent-color);
+  color: #efb435;
   position: relative;
 }
 
