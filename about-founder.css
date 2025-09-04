@@ -946,8 +946,9 @@ section,
   }
 }
 
-.hero .content-wrapper {
-  /* max-width: 600px; */
+.hero .content-wrapper h1 {
+  color: #000;
+  font-size: 3.5rem;
 }
 
 .hero .hero-title {
