@@ -54,16 +54,7 @@ document.addEventListener("click", function (e) {
     });
   }
 
-// Whatapp Icon 
-//   const whatsApp = document.querySelector('#whatsapp');
-// if (whatsApp) {
-//   window.addEventListener('load', () => {
-//     whatsApp.remove();
-//   });
-// }
-  /**
-   * Scroll top button
-   */
+
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -125,6 +116,44 @@ document.addEventListener("click", function (e) {
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
+
+
+
+
+//  Init typed.js
+   
+  const selectTyped = document.querySelector('.typed');
+  if (selectTyped) {
+    let typed_strings = selectTyped.getAttribute('data-typed-items');
+    typed_strings = typed_strings.split(',');
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+
+  /**
+   * Animate the skills items on reveal
+   */
+  let skillsAnimation = document.querySelectorAll('.skills-animation');
+  skillsAnimation.forEach((item) => {
+    new Waypoint({
+      element: item,
+      offset: '80%',
+      handler: function(direction) {
+        let progress = item.querySelectorAll('.progress .progress-bar');
+        progress.forEach(el => {
+          el.style.width = el.getAttribute('aria-valuenow') + '%';
+        });
+      }
+    });
+  });
+  
+
+
 
   /**
    * Init isotope layout and filters
