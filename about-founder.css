@@ -1029,6 +1029,19 @@ section,
   line-height: 1;
 }
 
+.purecounter-box{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.purecounter-box .plus{
+  color:#02478e;
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: center;
+  font-weight: 600;
+}
+
 .hero .hero-stats .stat-item .stat-label {
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.564) ;
