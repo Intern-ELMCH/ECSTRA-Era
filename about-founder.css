@@ -954,7 +954,7 @@ section,
 .hero-image{
   /* background-color: #2973cc; */
   width: 30vw;
-  /* top: -80px; */
+  top: -30px;
 }
 }
 @media (max-width: 991px) {
@@ -1188,8 +1188,8 @@ section,
   left: 20px;
   right: -20px;
   bottom: -20px;
-  background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
-  border-radius: 20px;
+  background-color: #02478e;
+  border-radius: 10px;
   z-index: 1;
 }
 
