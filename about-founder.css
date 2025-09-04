@@ -274,10 +274,11 @@ body {
   position: absolute;
   /* background:rgba(234, 232, 232, 0.648); */
   background-color: #ffffff;
-  min-width: 150px;
+  min-width: 200px;
+  border-radius: 10px;
   top: 100%;
   left: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -285,7 +286,7 @@ body {
   color: black;
   text-align: left;
   text-decoration: none;
-  border-bottom: 1px solid #fffdfd9e;
+  /* border-bottom: 1px solid #fffdfd9e; */
   padding: 10px;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
