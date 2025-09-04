@@ -939,7 +939,7 @@ section,
   top: -80px;
 }
 
-@media(min-width:1500px){
+@media(min-width:1310px){
   .hero .container {
   position: relative;
   display: flex;
