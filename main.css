@@ -1485,7 +1485,7 @@ section,
 }
 
 .about-founder-page .section-title p {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: black transparent 20%;
   margin: 5px 0 0 0;
   font-size: 16px;
   font-weight: 500;
@@ -2166,6 +2166,10 @@ justify-self: center;
 /*--------------------------------------------------------------
 # company Section
 --------------------------------------------------------------*/
+.company{
+  padding: 0%;
+}
+
 .company .company-filters {
   display: flex;
   justify-content: center;
@@ -2178,12 +2182,13 @@ justify-self: center;
 
 .company .company-filters li {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 12px 25px;
   cursor: pointer;
-  background: var(--surface-color);
-  color: var(--default-color);
+  background: white;
+  color: #02478e;
   border-radius: 30px;
+  /* border: 1px solid rgba(0, 0, 0, 0.336); */
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2196,9 +2201,9 @@ justify-self: center;
 }
 
 .company .company-filters li:hover {
-  color: var(--accent-color);
+  color:#02478e;
   transform: translateY(-2px);
-  background: color-mix(in srgb, var(--accent-color), transparent 9%);
+  background:#02488e13;
 }
 
 .company .company-filters li:hover i {
@@ -2206,7 +2211,7 @@ justify-self: center;
 }
 
 .company .company-filters li.filter-active {
-  background: var(--accent-color);
+  background: #02478e;
   color: var(--contrast-color);
 }
 
@@ -2418,6 +2423,263 @@ justify-self: center;
 
 
 
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+.testimonials {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.testimonials .critic-reviews {
+  /* margin-bottom: 60px; */
+}
+.col-md-4{
+  width: 49%;
+}
+
+.testimonials .critic-reviews .critic-review {
+  background-color: var(--surface-color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.174);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.testimonials .critic-reviews .critic-review .review-quote {
+  position: absolute;
+  top: -14px;
+  left: 10px;
+  font-size: 40px;
+  font-family: Georgia, serif;
+  color: #efb435;
+  justify-content: space-between;
+  /* opacity: 0.8; */
+  line-height: 1;
+}
+
+.testimonials .critic-reviews .critic-review .stars {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.testimonials .critic-reviews .critic-review .stars i {
+  color: #FFD700;
+  margin-right: 3px;
+  font-size: 18px;
+}
+
+.testimonials .critic-reviews .critic-review p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--default-color);
+  font-style: italic;
+}
+
+.testimonials .critic-reviews .critic-review .critic-info .critic-name {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.422);
+  font-size: 16px;
+}
+.testimonials .critic-reviews .critic-review .critic-info{
+  /* background-color: #0077B5; */
+  display: flex;
+  width: 99%;
+  bottom: 0;
+  flex-direction: row;
+  align-self: baseline;
+  margin-top: auto;
+  justify-self: flex-end;
+  justify-content: space-between;
+}
+.review-link i{
+  color: #02478e;
+  font-size: larger;
+  padding: 10px;
+  font-weight: bold;
+  /* font-weight: 800; */
+}
+.review-link i:hover{
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.testimonials .critic-reviews .critic-review:hover {
+  transform: translateY(-10px);
+}
+
+.testimonials .testimonials-container {
+  margin-bottom: 60px;
+}
+
+.testimonials .testimonials-container .swiper-wrapper {
+  height: auto !important;
+  padding-bottom: 20px;
+}
+
+.testimonials .testimonials-container .testimonial-item {
+  background-color: var(--surface-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border-top: 3px solid var(--accent-color);
+}
+
+.testimonials .testimonials-container .testimonial-item .stars {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.testimonials .testimonials-container .testimonial-item .stars i {
+  color: #FFD700;
+  margin-right: 3px;
+  font-size: 16px;
+}
+
+.testimonials .testimonials-container .testimonial-item p {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.testimonials .testimonials-container .testimonial-item .testimonial-profile {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials .testimonials-container .testimonial-item .testimonial-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  margin-right: 15px;
+}
+
+.testimonials .testimonials-container .testimonial-item .testimonial-profile div h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: var(--heading-color);
+}
+
+.testimonials .testimonials-container .testimonial-item .testimonial-profile div h4 {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 0;
+  font-weight: normal;
+}
+
+.testimonials .testimonials-container .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .testimonials-container .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+  opacity: 1;
+}
+
+.testimonials .testimonials-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  width: 20px;
+  border-radius: 10px;
+}
+
+.testimonials .overall-rating {
+  background-color: var(--surface-color);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: inline-block;
+}
+
+.testimonials .overall-rating .rating-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--heading-color);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.testimonials .overall-rating .rating-stars {
+  margin-bottom: 15px;
+}
+
+.testimonials .overall-rating .rating-stars i {
+  color: #FFD700;
+  font-size: 22px;
+  margin: 0 3px;
+}
+
+.testimonials .overall-rating p {
+  color: var(--default-color);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.testimonials .overall-rating .rating-platforms {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.testimonials .overall-rating .rating-platforms span {
+  font-size: 14px;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  .testimonials .section-header h2 {
+    font-size: 28px;
+  }
+
+  .testimonials .critic-reviews .critic-review {
+    margin-bottom: 30px;
+  }
+
+  .testimonials .testimonials-container .testimonial-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 60px 0;
+  }
+
+  .testimonials .section-header h2 {
+    font-size: 24px;
+  }
+
+  .testimonials .overall-rating {
+    padding: 30px;
+  }
+
+  .testimonials .overall-rating .rating-number {
+    font-size: 36px;
+  }
+
+  .testimonials .overall-rating .rating-stars i {
+    font-size: 18px;
+  }
+}
 
 
 
