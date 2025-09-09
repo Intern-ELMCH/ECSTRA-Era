@@ -1494,67 +1494,6 @@ section,
 
 
 
-/*-------------------- FOUNDER-SELF SECTION --------------------- */
-
-.founder-container{
- /* background-color: #f1dbdb; */
-  width: 87vw;
-  height: 100vh;
-align-self: center;
-justify-self: center;
-}
-
-.founder-grid-box{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 28vw;
-  grid-template-rows: repeat(6 auto);
-  gap: 2px;
-}
-.founder-info-box{
-  /* background-color: #008cad; */
-  min-height: 100px;
-  width: auto;
-  min-width: 200px;
-
-}
-.founder-heading{
-  grid-row: 1/2;
-  grid-column: 1/4;
-}
-.founder-content{
-  grid-column: 1/4;
-  grid-row: 2/4;
-  height: auto;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
 #ABOUT FOUNDER PAGE
@@ -2425,16 +2364,14 @@ justify-self: center;
 
 
 /*--------------------------------------------------------------
-# Testimonials Section
+#Achievements Section
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
   overflow: hidden;
 }
 
-.testimonials .critic-reviews {
-  /* margin-bottom: 60px; */
-}
+
 .col-md-4{
   width: 49%;
 }
@@ -2681,9 +2618,162 @@ justify-self: center;
   }
 }
 
+/* #----PUBLICATIONS AND RESEARCH WORK SECTION------------- */
+.testimonials-slider  .swiper-wrapper .swiper-slide{
+  padding: 2rem;
+  border-radius: 50px;
+}
+.testimonials-slider  .swiper-wrapper .swiper-slide .features-grid .feature-card {
+  height: 350px;
+  border-radius: 10px;
+  width: auto;
+  min-width: 360px;
+  position: relative;
+  
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front{
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+   gap: 20px;
+}
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front .paper-category{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  color: #02478e;
+  line-height: rem;
+}
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front .paper-category i{
+  font-size: 3rem;
+  padding-top: 10px;
+  /* justify-self: center; */
+}
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front .paper-category h4{
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+  
+}
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front .paper-name{
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.566);
+  text-align: center;
+  font-weight: 600;
+}
+.paper-footer{
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
 
 
 
+
+
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front,
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  border-radius: 0px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-front {
+  background: var(--surface-color);
+  box-shadow: 10px 10px 30px color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+
+.feature-front .paper-footer,.feature-back .paper-footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+margin-top: 0%;
+  justify-content: space-between;
+}
+
+ .paper-footer .date-of-paper{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.date-of-paper i{
+  color: #02478e;
+  font-size: 1.2rem;
+  padding-top: 2px;
+}
+.date-of-paper p{
+  color: #02478e;
+  font-style: italic;
+}
+
+/* FEATURE BACK  */
+.swiper-wrapper .swiper-slide .features-grid .feature-card .feature-back {
+  background: #0000000f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 10px 10px 30px color-mix(in srgb, var(--default-color), transparent 70%);
+  transform: rotateY(180deg);
+}
+.swiper-wrapper .swiper-slide .features-grid .feature-card:hover .feature-front {
+  transform: rotateY(180deg);
+}
+
+.swiper-wrapper .swiper-slide .features-grid .feature-card:hover .feature-back {
+  transform: rotateY(0deg);
+}
+
+.feature-back {
+  padding: 2rem
+}
+.feature-back .paper-info .paper-back{
+  display: flex;
+  flex-direction: column;
+  /* padding: 2rem; */
+  text-align: left;
+  /* gap:10px; */
+}
+.feature-back .paper-info .paper-back .paper-back-heading{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+.feature-back .paper-info .paper-back .paper-back-heading h5{
+
+font-size: 1.5rem;
+font-weight: 600;
+color: #02478e !important;
+
+
+}
+.feature-back .paper-info .paper-back i{
+  font-size: 1.5rem;
+  color: #02478e !important;
+  padding-top: 3px;
+}
+.paper-back p{
+  color:black;
+  text-align: center;
+  width: 100%;
+}
+.feature-back
 
 
 /*--------------------------------------------------------------
