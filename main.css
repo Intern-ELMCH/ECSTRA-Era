@@ -231,6 +231,7 @@ p{
   display: inline-block;
   background: var(--accent-color);
   color: var(--contrast-color);
+  /* opacity: 0; */
   padding: 8px 16px;
   border-radius: 25px;
   font-size: 12px;
@@ -851,7 +852,7 @@ body {
 }
 
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--default-color), transparent 97%);
+  background-color: rgba(128, 128, 128, 0.082);
   padding: 50px 0;
 }
 
@@ -939,7 +940,7 @@ body {
   margin-top: 20px;
   font-weight: bold;
   border: none;
-  box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.53);
+  /* box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.53); */
   display: inline-block;
   transition: 0.5s ease;
 }
@@ -2397,8 +2398,15 @@ section,
   justify-content: center;
   text-align: center;
 }
+
+
+.founder-page .founders-expertise-section{
+  background-color: #0000000f;
+  width: 100%;
+  height: auto;
+}
 .about .about-content .journey-timeline {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .about .about-content .journey-timeline .timeline-item {
@@ -2733,6 +2741,9 @@ section,
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.174);
   height: 100%;
   transition: transform 0.3s ease;
+}
+.testimonials .critic-reviews .row{
+  row-gap: 40px;
 }
 
 .testimonials .critic-reviews .critic-review .review-quote {
@@ -3186,14 +3197,20 @@ color: #ffffff !important;
   margin-top: 20px;
   font-weight: bold;
   border: none;
-  box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.53);
+  /* box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.53); */
   display: inline-block;
   transition: 0.5s ease;
 }
 
+.internship-form-btn:hover{
+  background-color: #efb435f3;
+  transform: translateY(-3px);
+  /* box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.53); */
+}
 .internship-left-text .left-btn a {
   background-color: #efb435;
   color: white;
+  z-index: 2;
   padding: 10px 20px;
   text-decoration: none;
   margin-top: 20px;
@@ -3276,7 +3293,7 @@ color: #ffffff !important;
 }
 
 .travel-hero .booking-form-wrapper .booking-form {
-  background-color: var(--surface-color);
+  background-color: #02478e;
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 85%);
@@ -3294,10 +3311,10 @@ color: #ffffff !important;
 }
 
 .travel-hero .booking-form-wrapper .booking-form label {
-  color: var(--heading-color);
-  font-weight: 500;
+  color: white;
+  font-weight: 600;
   margin-bottom: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .travel-hero .booking-form-wrapper .booking-form .form-control,
@@ -3306,21 +3323,23 @@ color: #ffffff !important;
   border-radius: 8px;
   padding: 12px 15px;
   font-size: 14px;
-  color: var(--default-color);
-  background-color: var(--surface-color);
+  color: rgba(0, 0, 0, 0.74);
+  z-index: 1;
+  background-color:rgb(255, 255, 255);
   transition: all 0.3s ease;
 }
 
 .travel-hero .booking-form-wrapper .booking-form .form-control:focus,
 .travel-hero .booking-form-wrapper .booking-form .form-select:focus {
   border-color: var(--accent-color);
+  color: #000;
   box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 75%);
   outline: none;
 }
 
 .travel-hero .booking-form-wrapper .booking-form .form-control::placeholder,
 .travel-hero .booking-form-wrapper .booking-form .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(0, 0, 0, 0.534);
 }
 
 .travel-hero .booking-form-wrapper .booking-form .btn-primary {
@@ -5612,7 +5631,9 @@ grid-column: 2 / 4;
 
 .eligibility-heading {
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
   
 }
 
@@ -5681,6 +5702,18 @@ grid-column: 2 / 4;
     /* height: 37vh; */
 
   }}
+
+  .eligibility-h3-btn h3{
+    text-align: center;
+    color: #00000088;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .eligibility-h3-btn {
+    text-align: center;
+   
+  }
 
    @media(max-width:768px){
     .pre-incubation-eligibility 
@@ -6410,10 +6443,37 @@ li {
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
+.travel-destinations .isotope-layout{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 50px;
+}
+
+.travel-destinations .isotope-container{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+/* align-content: center; */
+height: auto;
+padding-left: 50px;
+width: 100%;
+margin: 0 !important;
+/* justify-content: space-between; */
+/* background-color: turquoise; */
+gap: 4rem;
+}
 
 
-.travel-destinations .isotope-container .destination-item {
-  margin-bottom: 30px;
+.travel-destinations .container .isotope-layout .isotope-container .destination-item {
+  /* margin-bottom: 30px; */
+  /* background-color: red;  */
+  border-radius: 20px;
+  width: 45%;
+  height: 300px;
+  
   /* margin-left: 50px; */
 }
 
@@ -6434,9 +6494,11 @@ li {
 
 .travel-destinations .isotope-container .destination-tile {
   display: flex;
-  border-radius: 16px;
+  border-radius: 30px;
   overflow: hidden;
-  width: 350px;
+  width: 100%;
+  height: 100%;
+  background: var(--surface-color);
   box-shadow: 0 6px 20px color-mix(in srgb, var(--default-color), transparent 90%);
   transition: all 0.4s ease;
   cursor: pointer;
@@ -6449,20 +6511,27 @@ li {
 
 .travel-destinations .isotope-container .destination-tile .tile-image {
   position: relative;
-  height: 350px;
-  width: 350px;
+  height: 100%;
+  width: 100%;
+  /* object-fit: contain; */
   overflow: hidden;
 }
 
 .travel-destinations .isotope-container .destination-tile .tile-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.5s ease;
 }
 
+.travel-destinations .isotope-container .destination-item .sterile-case-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .travel-destinations .isotope-container .destination-tile .tile-image:hover img {
   transform: scale(1.1);
+  background-color: #02488e41;
 }
 
 .travel-destinations .isotope-container .destination-tile .tile-image .overlay-content {
@@ -6478,10 +6547,15 @@ li {
   padding: 20px;
 }
 
+.travel-destinations .isotope-container .destination-tile .tile-image .overlay-content:hover  {
+  background-color: #02488e5d;
+}
+
 .travel-destinations .isotope-container .destination-tile .tile-image .overlay-content .destination-tag {
   align-self: flex-end;
   padding: 6px 14px;
   border-radius: 20px;
+  opacity: 0;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
